@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Moje první hra v JavaScriptu</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body onkeydown="priStiskuKlavesy(event);">
+
+    <!-- mimozemšťan -->
+    <img id="panacek" src="obrazky/panacek.png">
+
+	<!-- předmět k sebrání, id="mince" -->
+	<img id="mince" src="obrazky/mince.png">
+
+	<!-- skóre -->
+	<p class="vysledek">Skóre: <span id="skore">0</span></p>
+
+
+	<script src="program.js"></script>
+</body>
+</html>
