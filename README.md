@@ -1,4 +1,4 @@
-# Letní Škola 2018 - JavaScript
+# Letní Škola 2019 - JavaScript
 
 Podklady pro druhou polovinu dne výuky JavaScriptu.
 
@@ -48,7 +48,7 @@ Všechny příkazy v tomto levelu budeš psát do funkce `priStiskuKlavesy()`,
 proto ji musíš v programu nadefinovat:
 
 ~~~
-function priStiskuKlavesy(klavesa) {
+function priStiskuKlavesy(event) {
 
     alert("Klávesa stisknuta");
 
@@ -99,7 +99,7 @@ panacekY = panacekY - 10;
 ~~~
 
 ~~~
-if (klavesa.key === "ArrowRight") {
+if (event.key === "ArrowRight") {
 
     // Sem muzes vlozit kterekoliv prikazy
     // ze seznamu (2).
@@ -111,7 +111,7 @@ if (klavesa.key === "ArrowRight") {
 ~~~
 
 ~~~
-if (klavesa.key === "ArrowLeft") {
+if (event.key === "ArrowLeft") {
 
     // Sem muzes vlozit kterekoliv prikazy
     // ze seznamu (2).
@@ -123,7 +123,7 @@ if (klavesa.key === "ArrowLeft") {
 ~~~
 
 ~~~
-if (klavesa.key === "ArrowUp") {
+if (event.key === "ArrowUp") {
 
     // Sem muzes vlozit kterekoliv prikazy
     // ze seznamu (2).
@@ -135,7 +135,7 @@ if (klavesa.key === "ArrowUp") {
 ~~~
 
 ~~~
-if (klavesa.key === "ArrowDown") {
+if (event.key === "ArrowDown") {
 
     // Sem muzes vlozit kterekoliv prikazy
     // ze seznamu (2).
@@ -186,7 +186,7 @@ minceX = Math.floor(Math.random() * (document.documentElement.clientWidth - minc
 minceY = Math.floor(Math.random() * (document.documentElement.clientHeight - minceVyska));
 ~~~
 ~~~
-minceX = 100;
+minceY = 100;
 ~~~
 ~~~
 objektMince.style.left = minceX + "px";
