@@ -21,7 +21,7 @@ panacekVyska = 70;
 ~~~
 
 
-Dále můžeš použít následující příkazy (ne nutně v tomto pořadí, musíš trochu přemýšlet):
+Dále můžeš použít následující příkazy (**ne nutně v tomto pořadí**, musíš trochu přemýšlet):
 ~~~
 objektPanacek.style.left = panacekX + "px";
 ~~~
@@ -70,7 +70,7 @@ Nový kousek HTML:
 ~~~
 
 
-Zpět v JavaScriptu je ve fuknci potřeba naprogramovat,
+Zpět v JavaScriptu je ve funkci potřeba naprogramovat,
 co se má stát při stisku.
 Můžeš použít příkazy ze seznamu (2):
 
@@ -271,9 +271,3 @@ var vyskaOkna;
 sirkaOkna = window.innerWidth;
 vyskaOkna = window.innerHeight;
 ~~~
-
-Level 8 - Přidej nepřátelskou postavičku
-========================================
-
-Ve složce obrázky máš i spoustu obrázků možných nepřátel. Přidej do stránky jeden z nich a dopiš program tak, aby se nepřítel sám pohyboval. Obrázku s nepřítelem přidej id="nepritel". Umíš zjistit i srážku nepřítele s panáčkem? Inspiruj se kódem pro srážku panáčka s mincí.
-
