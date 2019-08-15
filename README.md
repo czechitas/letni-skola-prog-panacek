@@ -44,7 +44,7 @@ Level 2 - Pohyb panáčka
 =======================
 Naprogramuj pohyb panáčka po obrazovce při stisku klávesy.
 
-Všechny příkazy v tomto levelu budeš psát do funkce `priStiskuKlavesy()`,
+Všechny příkazy v tomto levelu budeš psát do funkce `priStiskuKlavesy(event)`,
 proto ji musíš v programu nadefinovat:
 
 ~~~
@@ -52,12 +52,12 @@ function priStiskuKlavesy(event) {
 
     alert("Klávesa stisknuta");
 
-    // Sem muzes vlozit prikazy ze seznamu (2)
+    // Sem můžeš vložit příkazy ze seznamu (2)
 
 }
 ~~~
 
-Dále je nutné tuto funkcni nastavit v HTML, aby se vyvolávala:
+Dále je nutné v HTML tuto funkcni nastavit, aby se vyvolávala:
 
 Původní kousek HTML:
 ~~~
@@ -71,7 +71,7 @@ Nový kousek HTML:
 
 
 Zpět v JavaScriptu je ve funkci potřeba naprogramovat,
-co se má stát při stisku.
+co se má stát při stisku klávesy.
 Můžeš použít příkazy ze seznamu (2):
 
 ~~~
@@ -101,11 +101,11 @@ panacekY = panacekY - 10;
 ~~~
 if (event.key === "ArrowRight") {
 
-    // Sem muzes vlozit kterekoliv prikazy
+    // Sem můžeš vložit kterékoliv příkazy
     // ze seznamu (2).
-    // Prikazy zde se provedou pouze,
-    // pokud byla stisknuta
-    // SIPKA VPRAVO
+    // Příkazy zde se provedou pouze,
+    // pokud byla stisknuta klávesa
+    // ŠIPKA DOLŮ
 
 }
 ~~~
@@ -113,11 +113,11 @@ if (event.key === "ArrowRight") {
 ~~~
 if (event.key === "ArrowLeft") {
 
-    // Sem muzes vlozit kterekoliv prikazy
+    // Sem můžeš vložit kterékoliv příkazy
     // ze seznamu (2).
-    // Prikazy zde se provedou pouze,
-    // pokud byla stisknuta
-    // SIPKA VLEVO
+    // Příkazy zde se provedou pouze,
+    // pokud byla stisknuta klávesa
+    // ŠIPKA VLEVO
 
 }
 ~~~
@@ -125,11 +125,11 @@ if (event.key === "ArrowLeft") {
 ~~~
 if (event.key === "ArrowUp") {
 
-    // Sem muzes vlozit kterekoliv prikazy
+    // Sem můžeš vložit kterékoliv příkazy
     // ze seznamu (2).
-    // Prikazy zde se provedou pouze,
-    // pokud byla stisknuta
-    // SIPKA NAHORU
+    // Příkazy zde se provedou pouze,
+    // pokud byla stisknuta klávesa
+    // ŠIPKA NAHORU
 
 }
 ~~~
@@ -137,11 +137,11 @@ if (event.key === "ArrowUp") {
 ~~~
 if (event.key === "ArrowDown") {
 
-    // Sem muzes vlozit kterekoliv prikazy
+    // Sem můžeš vložit kterékoliv příkazy
     // ze seznamu (2).
-    // Prikazy zde se provedou pouze,
-    // pokud byla stisknuta
-    // SIPKA DOLU
+    // Příkazy zde se provedou pouze,
+    // pokud byla stisknuta klávesa
+    // ŠIPKA DOLŮ
 
 }
 ~~~
@@ -202,17 +202,18 @@ Level 4 - Umožni sbírání mincí
 Pro sebrání mince je nutno testovat střet objektu panáčka a objektu mince.
 
 ~~~
-// zjistíme, zda docháí ke kolizi mimozemšťana a objektMince
+// zjistíme, zda dochází ke kolizi mimozemšťana a mince
 // tj. zda se překrývají dva obdélníky o známých souřadnicích
 if (!(panacekX + panacekSirka < minceX ||
       minceX + minceSirka < panacekX ||
       panacekY + panacekVyska < minceY ||
       minceY + minceVyska < panacekY)) {
 
-    // Sem vloz prikazy, ktere se maji provest
-    // pri stretu panacka a mince
-    // Napr. posun minci na jine nehodne misto
-    // Zvetsi pocetSkore o 1.
+    // Sem vlož příkazy, které se mají provést
+    // při střetu panáčka a mince
+    // Např.:
+    // 1) posuň minci na jiné náhodné místo
+    // 2) zvětši pocetSkore o 1
 
 }
 ~~~
