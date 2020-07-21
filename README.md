@@ -1,4 +1,4 @@
-# Letní Škola 2019 - JavaScript
+# Letní Škola 2020 - Programování
 
 Podklady pro druhou polovinu dne výuky JavaScriptu.
 
