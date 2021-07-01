@@ -20,7 +20,6 @@ objektPanacek.style.left = panacekX + "px";
 objektPanacek.style.top = panacekY + "px";
 
 
-
 var objektMince;
 var minceX;
 var minceY;
@@ -49,33 +48,24 @@ objektSkore = document.querySelector("#skore");
 
 
 function priStiskuKlavesy(klavesa) {
-
   if (klavesa.key === "ArrowRight") {
-
     panacekX = panacekX + 10;
     objektPanacek.src = "obrazky/panacek-vpravo.png";
-
   }
 
   if (klavesa.key === "ArrowLeft") {
-
     panacekX = panacekX - 10;
     objektPanacek.src = "obrazky/panacek-vlevo.png";
-
   }
 
   if (klavesa.key === "ArrowUp") {
-
     panacekY = panacekY - 10;
     objektPanacek.src = "obrazky/panacek-nahoru.png";
-
   }
 
   if (klavesa.key === "ArrowDown") {
-
     panacekY = panacekY + 10;
     objektPanacek.src = "obrazky/panacek.png";
-
   }
 
   objektPanacek.style.left = panacekX + "px";
@@ -88,17 +78,16 @@ function priStiskuKlavesy(klavesa) {
       panacekY + panacekVyska < minceY ||
       minceY + minceVyska < panacekY)) {
 
-      // Zvětši score o 1
-      pocetSkore = pocetSkore + 1;
+    // Zvětši score o 1
+    pocetSkore = pocetSkore + 1;
 
-      // A změníme text skóre na stránce
-      objektSkore.textContent = pocetSkore;
+    // A změníme text skóre na stránce
+    objektSkore.textContent = pocetSkore;
 
-      // Přesuň minci na novou náhodnou pozici
-      minceX = Math.floor(Math.random() * (document.documentElement.clientWidth - minceSirka));
-      minceY = Math.floor(Math.random() * (document.documentElement.clientHeight - minceVyska));
-      objektMince.style.left = minceX + "px";
-      objektMince.style.top = minceY + "px";
+    // Přesuň minci na novou náhodnou pozici
+    minceX = Math.floor(Math.random() * (document.documentElement.clientWidth - minceSirka));
+    minceY = Math.floor(Math.random() * (document.documentElement.clientHeight - minceVyska));
+    objektMince.style.left = minceX + "px";
+    objektMince.style.top = minceY + "px";
   }
-
 }

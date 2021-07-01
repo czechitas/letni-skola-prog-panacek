@@ -20,7 +20,6 @@ objektPanacek.style.left = panacekX + "px";
 objektPanacek.style.top = panacekY + "px";
 
 
-
 var objektMince;
 var minceX;
 var minceY;
@@ -40,36 +39,23 @@ objektMince.style.left = minceX + "px";
 objektMince.style.top = minceY + "px";
 
 
-
-
 function priStiskuKlavesy(klavesa) {
-
-
   if (klavesa.key === "ArrowRight") {
-
     panacekX = panacekX + 10;
-
   }
 
   if (klavesa.key === "ArrowLeft") {
-
     panacekX = panacekX - 10;
-
   }
 
   if (klavesa.key === "ArrowUp") {
-
     panacekY = panacekY - 10;
-
   }
 
   if (klavesa.key === "ArrowDown") {
-
     panacekY = panacekY + 10;
-
   }
 
   objektPanacek.style.left = panacekX + "px";
   objektPanacek.style.top = panacekY + "px";
-
 }
