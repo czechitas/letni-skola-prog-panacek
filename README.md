@@ -136,7 +136,7 @@ if (event.key === "ArrowRight") {
     // ze seznamu (2).
     // Příkazy zde se provedou pouze,
     // pokud byla stisknuta klávesa
-    // ŠIPKA DOLŮ
+    // ŠIPKA VPRAVO
 
 }
 ~~~
