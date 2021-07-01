@@ -50,18 +50,22 @@ objektSkore = document.querySelector("#skore");
 function priStiskuKlavesy(klavesa) {
   if (klavesa.key === "ArrowRight") {
     panacekX = panacekX + 10;
+    objektPanacek.src = "obrazky/panacek-vpravo.png";
   }
 
   if (klavesa.key === "ArrowLeft") {
     panacekX = panacekX - 10;
+    objektPanacek.src = "obrazky/panacek-vlevo.png";
   }
 
   if (klavesa.key === "ArrowUp") {
     panacekY = panacekY - 10;
+    objektPanacek.src = "obrazky/panacek-nahoru.png";
   }
 
   if (klavesa.key === "ArrowDown") {
     panacekY = panacekY + 10;
+    objektPanacek.src = "obrazky/panacek.png";
   }
 
   objektPanacek.style.left = panacekX + "px";

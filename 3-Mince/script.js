@@ -20,6 +20,25 @@ objektPanacek.style.left = panacekX + "px";
 objektPanacek.style.top = panacekY + "px";
 
 
+var objektMince;
+var minceX;
+var minceY;
+var minceSirka;
+var minceVyska;
+
+/* najdeme minci na stránce a uložíme si její velikost*/
+objektMince = document.querySelector("#mince");
+minceSirka = 32;
+minceVyska = 32;
+
+
+/* umísti minci na náhodnou pozici */
+minceX = Math.floor(Math.random() * (document.documentElement.clientWidth - minceSirka));
+minceY = Math.floor(Math.random() * (document.documentElement.clientHeight - minceVyska));
+objektMince.style.left = minceX + "px";
+objektMince.style.top = minceY + "px";
+
+
 function priStiskuKlavesy(klavesa) {
   if (klavesa.key === "ArrowRight") {
     panacekX = panacekX + 10;

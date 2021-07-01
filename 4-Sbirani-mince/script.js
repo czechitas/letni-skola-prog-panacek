@@ -38,6 +38,14 @@ minceY = Math.floor(Math.random() * (document.documentElement.clientHeight - min
 objektMince.style.left = minceX + "px";
 objektMince.style.top = minceY + "px";
 
+/* vytvoříme počitadlo skóre a nastavíme ho na nulu */
+var pocetSkore;
+pocetSkore = 0;
+
+/* najdeme na stránce prvek, kam budeme skóre dopisovat */
+var objektSkore;
+objektSkore = document.querySelector("#skore");
+
 
 function priStiskuKlavesy(klavesa) {
   if (klavesa.key === "ArrowRight") {
@@ -58,4 +66,24 @@ function priStiskuKlavesy(klavesa) {
 
   objektPanacek.style.left = panacekX + "px";
   objektPanacek.style.top = panacekY + "px";
+
+  // zjistíme, zda docháí ke kolizi mimozemšťana a objektMince
+  // tj. zda se překrývají dva obdélníky o známých souřadnicích
+  if (!(panacekX + panacekSirka < minceX ||
+      minceX + minceSirka < panacekX ||
+      panacekY + panacekVyska < minceY ||
+      minceY + minceVyska < panacekY)) {
+
+    // Zvětši score o 1
+    pocetSkore = pocetSkore + 1;
+
+    // A změníme text skóre na stránce
+    objektSkore.textContent = pocetSkore;
+
+    // Přesuň minci na novou náhodnou pozici
+    minceX = Math.floor(Math.random() * (document.documentElement.clientWidth - minceSirka));
+    minceY = Math.floor(Math.random() * (document.documentElement.clientHeight - minceVyska));
+    objektMince.style.left = minceX + "px";
+    objektMince.style.top = minceY + "px";
+  }
 }

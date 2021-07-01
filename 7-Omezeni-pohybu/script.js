@@ -52,25 +52,45 @@ var objektZvuk;
 objektZvuk = document.querySelector("#zvukmince");
 
 
+var sirkaOkna;
+var vyskaOkna;
+
+sirkaOkna = window.innerWidth;
+vyskaOkna = window.innerHeight;
+
+
+
 function priStiskuKlavesy(klavesa) {
   if (klavesa.key === "ArrowRight") {
     panacekX = panacekX + 10;
     objektPanacek.src = "obrazky/panacek-vpravo.png";
+    if (panacekX + panacekSirka > sirkaOkna) {
+      panacekX = sirkaOkna - panacekSirka;
+    }
   }
 
   if (klavesa.key === "ArrowLeft") {
     panacekX = panacekX - 10;
     objektPanacek.src = "obrazky/panacek-vlevo.png";
+    if (panacekX < 0) {
+      panacekX = 0;
+    }
   }
 
   if (klavesa.key === "ArrowUp") {
     panacekY = panacekY - 10;
     objektPanacek.src = "obrazky/panacek-nahoru.png";
+    if (panacekY < 0) {
+      panacekY = 0;
+    }
   }
 
   if (klavesa.key === "ArrowDown") {
     panacekY = panacekY + 10;
     objektPanacek.src = "obrazky/panacek.png";
+    if (panacekY + panacekVyska > vyskaOkna) {
+      panacekY = vyskaOkna - panacekVyska;
+    }
   }
 
   objektPanacek.style.left = panacekX + "px";

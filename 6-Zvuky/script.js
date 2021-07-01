@@ -47,6 +47,11 @@ var objektSkore;
 objektSkore = document.querySelector("#skore");
 
 
+/* najdeme na stránce zvuk cinknutí mince */
+var objektZvuk;
+objektZvuk = document.querySelector("#zvukmince");
+
+
 function priStiskuKlavesy(klavesa) {
   if (klavesa.key === "ArrowRight") {
     panacekX = panacekX + 10;
@@ -83,6 +88,9 @@ function priStiskuKlavesy(klavesa) {
 
     // A změníme text skóre na stránce
     objektSkore.textContent = pocetSkore;
+
+    // Přehrajeme zvuk cinknutí
+    objektZvuk.play();
 
     // Přesuň minci na novou náhodnou pozici
     minceX = Math.floor(Math.random() * (document.documentElement.clientWidth - minceSirka));
