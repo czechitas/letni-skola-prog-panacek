@@ -1,10 +1,10 @@
 /* Naprogramuj vlastní hru s panáčkem */
 
-var objektPanacek;
-var panacekX;
-var panacekY;
-var panacekSirka;
-var panacekVyska;
+let objektPanacek;
+let panacekX;
+let panacekY;
+let panacekSirka;
+let panacekVyska;
 
 // Najde panáčka na stránce a uloží ho do proměnné objektPanacek
 objektPanacek = document.querySelector("#panacek");
@@ -21,11 +21,11 @@ objektPanacek.style.left = panacekX + "px";
 objektPanacek.style.top = panacekY + "px";
 
 
-var objektMince;
-var minceX;
-var minceY;
-var minceSirka;
-var minceVyska;
+let objektMince;
+let minceX;
+let minceY;
+let minceSirka;
+let minceVyska;
 
 // Najde minci na stránce a uloží ji do proměnné objektMince
 objektMince = document.querySelector("#mince");
@@ -42,11 +42,11 @@ objektMince.style.left = minceX + "px";
 objektMince.style.top = minceY + "px";
 
 // Vytvoří počítadlo skóre a nastavíme ho na nulu
-var pocetSkore;
+let pocetSkore;
 pocetSkore = 0;
 
 // Najde na stránce prvek, kam se bude skóre dopisovat
-var objektSkore;
+let objektSkore;
 objektSkore = document.querySelector("#skore");
 
 

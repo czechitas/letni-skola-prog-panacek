@@ -1,10 +1,10 @@
 /* Naprogramuj vlastní hru s panáčkem */
 
-var objektPanacek;
-var panacekX;
-var panacekY;
-var panacekSirka;
-var panacekVyska;
+let objektPanacek;
+let panacekX;
+let panacekY;
+let panacekSirka;
+let panacekVyska;
 
 // Najde panáčka na stránce a uloží ho do proměnné objektPanacek
 objektPanacek = document.querySelector("#panacek");

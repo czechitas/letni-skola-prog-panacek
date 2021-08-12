@@ -17,11 +17,11 @@ Umísti panáčka více do středu obrazovky, třeba na pevnou pozici
 Tyto příkazy jsou povinné. Jsou to deklarace proměnných, které budou obsahovat souřadnice panáčka. Prostě vše 1:1 překopíruj do `script.js`.
 Všimni si, že příkazy zatím nenastavují panáčka na žádnou pozici. Bude tedy na [0, 0].
 ~~~javascript
-var objektPanacek;
-var panacekX;
-var panacekY;
-var panacekSirka;
-var panacekVyska;
+let objektPanacek;
+let panacekX;
+let panacekY;
+let panacekSirka;
+let panacekVyska;
 
 // Najde panáčka na stránce a uloží ho do proměnné objektPanacek
 objektPanacek = document.querySelector("#panacek");
@@ -192,11 +192,11 @@ Panáček má za úkol sbírat mince. Přidej tedy minci do HTML do `<body>`.
 Aby s ní šlo pracovat v programu, ulož ji v JavaScriptu do proměnné:
 
 ~~~javascript
-var objektMince;
-var minceX;
-var minceY;
-var minceSirka;
-var minceVyska;
+let objektMince;
+let minceX;
+let minceY;
+let minceSirka;
+let minceVyska;
 
 // Najde minci na stránce a uloží ji do proměnné objektMince
 objektMince = document.querySelector("#mince");
@@ -275,7 +275,7 @@ kolik mincí panáček sebral.
 
 ~~~javascript
 // Najde na stránce prvek, kam se bude skóre dopisovat
-var objektSkore;
+let objektSkore;
 objektSkore = document.querySelector("#skore");
 ~~~
 
@@ -339,9 +339,17 @@ Přidej do hry kód, který při pohybu panáčka omezí.
 Šířku a výšku obrazovky (okna prohlížeče) zjistíš takto:
 
 ~~~javascript
-var sirkaOkna;
-var vyskaOkna;
+let sirkaOkna;
+let vyskaOkna;
 
 sirkaOkna = window.innerWidth;
 vyskaOkna = window.innerHeight;
 ~~~
+
+
+
+Level 8 - Vlastní vylepšení
+===========================
+
+Projekt obsahuje spoustu předpřipravených obrázků a zvuků.
+Zkus přidat třeba nepřátele (mouchy...), životy, sbírání i jiných věcí než mincí.
