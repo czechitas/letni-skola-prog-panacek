@@ -63,14 +63,14 @@ Naprogramuj pohyb panáčka po obrazovce při stisku klávesy.
 
 Všechny příkazy v tomto levelu budeš psát do funkce `priStiskuKlavesy(event)`,
 proto ji musíš v programu nadefinovat dle příkladu níže.
-Pro začátek je v těle funkce nachystán příkaz `alert(..)`,
+Pro začátek je v těle funkce nachystán příkaz `console.log(..)`,
 který při zavolání funkce zobrazí pomocnou hlášku, aby bylo vidět, že to funguje. 
                                                          
 Definice funkce:
 
 ~~~javascript
 function priStiskuKlavesy(event) {
-    alert("Klávesa stisknuta");
+    console.log("Klávesa stisknuta");
 
     // Sem můžeš vložit příkazy ze seznamu (2)
 }
@@ -96,7 +96,7 @@ Následuje tvoje programování:
 Zpět v JavaScriptu. Nahraď zobrazování konstantní hlášky,
 když uživatel stiskne kteroukoliv klávesu,
 za pohyb panáčka při stisku klávesy šipka nahoru/dolů/vlevo/vpravo.  
-Použij příkazy ze seznamu (2) a zbav se `alert(..)`. Příkazy opět **nejsou záměrně ve správném pořadí**. 
+Použij příkazy ze seznamu (2) a zbav se `console.log(..)`. Příkazy opět **nejsou záměrně ve správném pořadí**.
               
 Seznam (2):
 ~~~javascript
