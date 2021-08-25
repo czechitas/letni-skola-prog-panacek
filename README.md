@@ -370,8 +370,10 @@ vyskaOkna = window.innerHeight;
 
 Pokud to naprogramuješ správně, s panáčkem by teď nemělo být možné vyjít ve vpravo a dolů mimo obraz.
 
-Možná si ale všimneš, že při pohybu úplně vpravo k okraji se dole objeví posuvník a obraz se mírně posune doleva (zhruba o 2 cm).
+Možná si ale všimneš, že při pohybu doprava nadoraz se dole objeví posuvník a obraz se mírně posune (zhruba o 2 cm).
 Čím to je? Který objekt na obrazovce je široký zhruba právě 2 cm? Co se kde musí odečíst, aby to fungovalo bezchybně?
+
+![Ukázka chyby omezení pohybu](chyba-pohybu-vpravo.png)
 
 
 
