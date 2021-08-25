@@ -242,7 +242,8 @@ Level 4 - Sbírání mincí
                   
 Umožni, aby panáček mohl sebrat mince a přičetlo se mu skóre.
 
-Pro sebrání mince je nutno testovat střet obrázku panáčka a obrázku mince.
+Pro sebrání mince je nutno **při každém pohybu panáčka** testovat střet *obrázku panáčka* a *obrázku mince*.
+Rozhodni se tedy správně, kam příkaz vložit.
 
 ~~~javascript
 // Podmínka zjistí, zda dochází ke kolizi panáčka a mince
@@ -261,7 +262,7 @@ if (!(panacekX + panacekSirka < minceX ||
 }
 ~~~
 
-Sebrání mince lze simulovat tak, že se mince prostě přesune na jiné náhodné souřadnice.
+Sebrání mince lze simulovat tak, že se mince prostě přesune na jiné (náhodné) souřadnice.
 Příkazy k tomu už máš v minulém kroku. Jen je musíš okopírovat na správné místo v programu.
 
 Pokud chceš přidat do stránky skóre, doplň do HTML tyto značky:
@@ -329,14 +330,35 @@ objektZvuk.play();
 
 
 
-Level 7 - Omezení pohybu panáčka
-================================
+Level 7 - Omezení pohybu panáčka vlevo a nahoru
+===============================================
 
 Panáček už krásně chodí, sbírá mince, ale má to jeden neduh.
 Může se posunout mimo hranice herní plochy a vyjít ven z obrazovky.
-Přidej do hry kód, který při pohybu panáčka omezí.
+Přidej do hry kód, který pohyb panáčka omezí.
 
-Šířku a výšku obrazovky (okna prohlížeče) zjistíš takto:
+Jednodušší je nejprve vyřešit levou a horní hranici obrazovky. Pravou a spodní hranici budeš moct vyřešit v přístím levelu.
+
+Vlož tento kód, omezující pohyb vlevo, na správné místo v programu:
+
+~~~javascript
+// Pokud se stane, že by X-ová souřadnice panáčka byla záporná, naprav to.
+if (panacekX < 0) {
+    panacekX = 0;
+}
+~~~
+
+Ověř, že panáček už nemůže zajít vlevo mimo obraz a podobně obraň i Y-ovou souřadnici.
+
+
+
+Level 8 - Omezení pohybu panáčka vpravo a dolů
+==============================================
+
+Omezení pohybu vpravo a dolů je podobné jako v minulém levelu. Je nicméně komplikovanější o to,
+že podmínka není `< 0`, ale naopak větší než jiná hodnota. Která?
+
+Trochu ti napovíme, když ti ukážeme, jak zjistíš šířku a výšku obrazovky (okna prohlížeče):
 
 ~~~javascript
 let sirkaOkna;
@@ -346,9 +368,14 @@ sirkaOkna = window.innerWidth;
 vyskaOkna = window.innerHeight;
 ~~~
 
+Pokud to naprogramuješ správně, s panáčkem by teď nemělo být možné vyjít ve vpravo a dolů mimo obraz.
+
+Možná si ale všimneš, že při pohybu úplně vpravo k okraji se dole objeví posuvník a obraz se mírně posune doleva (zhruba o 2 cm).
+Čím to je? Který objekt na obrazovce je široký zhruba právě 2 cm? Co se kde musí odečíst, aby to fungovalo bezchybně?
 
 
-Level 8 - Vlastní vylepšení
+
+Level 9 - Vlastní vylepšení
 ===========================
 
 Projekt obsahuje spoustu předpřipravených obrázků a zvuků.
