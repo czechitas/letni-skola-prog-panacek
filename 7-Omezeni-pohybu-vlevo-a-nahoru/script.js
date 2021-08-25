@@ -50,6 +50,19 @@ let objektSkore;
 objektSkore = document.querySelector("#skore");
 
 
+// Najde na stránce zvuk cinknutí mince
+let objektZvuk;
+objektZvuk = document.querySelector("#zvukmince");
+
+
+let sirkaOkna;
+let vyskaOkna;
+
+sirkaOkna = window.innerWidth;
+vyskaOkna = window.innerHeight;
+
+
+
 function priStiskuKlavesy(klavesa) {
   if (klavesa.key === "ArrowRight") {
     panacekX = panacekX + 10;
@@ -59,11 +72,17 @@ function priStiskuKlavesy(klavesa) {
   if (klavesa.key === "ArrowLeft") {
     panacekX = panacekX - 10;
     objektPanacek.src = "obrazky/panacek-vlevo.png";
+    if (panacekX < 0) {
+      panacekX = 0;
+    }
   }
 
   if (klavesa.key === "ArrowUp") {
     panacekY = panacekY - 10;
     objektPanacek.src = "obrazky/panacek-nahoru.png";
+    if (panacekY < 0) {
+      panacekY = 0;
+    }
   }
 
   if (klavesa.key === "ArrowDown") {
@@ -86,6 +105,9 @@ function priStiskuKlavesy(klavesa) {
     minceY = Math.floor(Math.random() * (window.innerHeight - minceVyska));
     objektMince.style.left = minceX + "px";
     objektMince.style.top = minceY + "px";
+
+    // Přehraje zvuk cinknutí
+    objektZvuk.play();
 
     // Zvětší skore o 1
     pocetSkore = pocetSkore + 1;
