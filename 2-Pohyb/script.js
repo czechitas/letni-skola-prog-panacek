@@ -1,43 +1,43 @@
 /* Naprogramuj vlastní hru s panáčkem */
 
-let objektPanacek;
-let panacekX;
-let panacekY;
-let panacekSirka;
-let panacekVyska;
+let objektPanacek
+let panacekX
+let panacekY
+let panacekSirka
+let panacekVyska
 
 // Najde panáčka na stránce a uloží ho do proměnné objektPanacek
-objektPanacek = document.querySelector("#panacek");
+objektPanacek = document.querySelector("#panacek")
 
 // Do proměnných panacekSirka a panacekVyska si nachystáme velikost panáčka.
 // Zatím to nevyužijeme, ale bude se to hodit později  
-panacekSirka = 64;
-panacekVyska = 70;
+panacekSirka = 64
+panacekVyska = 70
 
 // Nastaví panáčka na novou pozici
-panacekX = 400;
-panacekY = 300;
-objektPanacek.style.left = panacekX + "px";
-objektPanacek.style.top = panacekY + "px";
+panacekX = 400
+panacekY = 300
+objektPanacek.style.left = panacekX + "px"
+objektPanacek.style.top = panacekY + "px"
 
 
 function priStiskuKlavesy(klavesa) {
   if (klavesa.key === "ArrowRight") {
-    panacekX = panacekX + 10;
+    panacekX = panacekX + 10
   }
 
   if (klavesa.key === "ArrowLeft") {
-    panacekX = panacekX - 10;
+    panacekX = panacekX - 10
   }
 
   if (klavesa.key === "ArrowUp") {
-    panacekY = panacekY - 10;
+    panacekY = panacekY - 10
   }
 
   if (klavesa.key === "ArrowDown") {
-    panacekY = panacekY + 10;
+    panacekY = panacekY + 10
   }
 
-  objektPanacek.style.left = panacekX + "px";
-  objektPanacek.style.top = panacekY + "px";
+  objektPanacek.style.left = panacekX + "px"
+  objektPanacek.style.top = panacekY + "px"
 }
