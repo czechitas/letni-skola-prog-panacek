@@ -316,7 +316,7 @@ Doplň do hry zvuky. Např. cinknutí mince, když ji panáček sebere.
 Nejprve musíš přidat do HTML značku pro vybraný zvuk:
 
 ~~~html
-<audio id="zvukmince" src="zvuky/mince.wav"></audio>
+<audio id="zvukmince" src="zvuky/mince.mp3"></audio>
 ~~~
 
 Zvuk pak v JavaScriptu vyhledáš na stránce pomocí `document.querySelector(..)`
