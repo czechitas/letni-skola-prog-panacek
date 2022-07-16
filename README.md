@@ -17,41 +17,41 @@ Umísti panáčka více do středu obrazovky, třeba na pevnou pozici
 Tyto příkazy jsou povinné. Jsou to deklarace proměnných, které budou obsahovat souřadnice panáčka. Prostě vše 1:1 překopíruj do `script.js`.
 Všimni si, že příkazy zatím nenastavují panáčka na žádnou pozici. Bude tedy na [0, 0].
 ~~~javascript
-let objektPanacek;
-let panacekX;
-let panacekY;
-let panacekSirka;
-let panacekVyska;
+let objektPanacek
+let panacekX
+let panacekY
+let panacekSirka
+let panacekVyska
 
 // Najde panáčka na stránce a uloží ho do proměnné objektPanacek
-objektPanacek = document.querySelector("#panacek");
+objektPanacek = document.querySelector("#panacek")
 
 // Do proměnných panacekSirka a panacekVyska si nachystáme velikost panáčka.
-// Zatím to nevyužijeme, ale bude se to hodit později  
-panacekSirka = 64;
-panacekVyska = 70;
+// Zatím to nevyužijeme, ale bude se to hodit později
+panacekSirka = 64
+panacekVyska = 70
 ~~~
 
 Teď pomocí následujících příkazů umísti panáčka na pozici [400, 300].
 Schválně **nejsou ve správném pořadí**, musíš trochu přemýšlet:
 ~~~javascript
 // Přesune (zobrazí) panáčka na obrazovce ve vodorovném směru na souřadnici z proměnné panacekX
-objektPanacek.style.left = panacekX + "px";
+objektPanacek.style.left = panacekX + "px"
 ~~~
 
 ~~~javascript
 // Nastaví hodnotu do proměnné panacekX
-panacekX = 400;
+panacekX = 400
 ~~~
 
 ~~~javascript
 // Přesune (zobrazí) panáčka na obrazovce ve svislém směru na souřadnici z proměnné panacekY
-objektPanacek.style.top = panacekY + "px";
+objektPanacek.style.top = panacekY + "px"
 ~~~
 
 ~~~javascript
 // Nastaví hodnotu do proměnné panacekY
-panacekY = 300;
+panacekY = 300
 ~~~
 
 
@@ -64,13 +64,13 @@ Naprogramuj pohyb panáčka po obrazovce při stisku klávesy.
 Všechny příkazy v tomto levelu budeš psát do funkce `priStiskuKlavesy(event)`,
 proto ji musíš v programu nadefinovat dle příkladu níže.
 Pro začátek je v těle funkce nachystán příkaz `console.log(..)`,
-který při zavolání funkce zobrazí pomocnou hlášku, aby bylo vidět, že to funguje. 
-                                                         
+který při zavolání funkce zobrazí pomocnou hlášku, aby bylo vidět, že to funguje.
+
 Definice funkce:
 
 ~~~javascript
 function priStiskuKlavesy(event) {
-    console.log("Klávesa stisknuta");
+    console.log("Klávesa stisknuta")
 
     // Sem můžeš vložit příkazy ze seznamu (2)
 }
@@ -86,47 +86,47 @@ Původní kousek HTML:
 
 Nahraď novým kouskem HTML:
 ~~~html
-<body onkeydown="priStiskuKlavesy(event);">
+<body onkeydown="priStiskuKlavesy(event)">
 ~~~
 
-Teď projekt spusť a vyzkoušej, že se při stisku libovolné klávesy zobrazí hláška `Klávesa stisknuta`. 
+Teď projekt spusť a vyzkoušej, že se při stisku libovolné klávesy zobrazí hláška `Klávesa stisknuta`.
 
 Následuje tvoje programování:
 
 Zpět v JavaScriptu. Nahraď zobrazování konstantní hlášky,
 když uživatel stiskne kteroukoliv klávesu,
-za pohyb panáčka při stisku klávesy šipka nahoru/dolů/vlevo/vpravo.  
+za pohyb panáčka při stisku klávesy šipka nahoru/dolů/vlevo/vpravo.
 Použij příkazy ze seznamu (2) a zbav se `console.log(..)`. Příkazy opět **nejsou záměrně ve správném pořadí**.
-              
+
 Seznam (2):
 ~~~javascript
 // Přesune (zobrazí) panáčka na obrazovce ve vodorovném směru na souřadnici z proměnné panacekX
-objektPanacek.style.left = panacekX + "px";
+objektPanacek.style.left = panacekX + "px"
 ~~~
 
 ~~~javascript
 // Přesune (zobrazí) panáčka na obrazovce ve svislém směru na souřadnici z proměnné panacekY
-objektPanacek.style.top = panacekY + "px";
+objektPanacek.style.top = panacekY + "px"
 ~~~
 
 ~~~javascript
 // Zvýší hodnotu v proměnné panacekX o 10
-panacekX = panacekX + 10;
+panacekX = panacekX + 10
 ~~~
 
 ~~~javascript
 // Sníží hodnotu v proměnné panacekX o 10
-panacekX = panacekX - 10;
+panacekX = panacekX - 10
 ~~~
 
 ~~~javascript
 // Zvýší hodnotu v proměnné panacekY o 10
-panacekY = panacekY + 10;
+panacekY = panacekY + 10
 ~~~
 
 ~~~javascript
 // Sníží hodnotu v proměnné panacekY o 10
-panacekY = panacekY - 10;
+panacekY = panacekY - 10
 ~~~
 
 ~~~javascript
@@ -192,18 +192,18 @@ Panáček má za úkol sbírat mince. Přidej tedy minci do HTML do `<body>`.
 Aby s ní šlo pracovat v programu, ulož ji v JavaScriptu do proměnné:
 
 ~~~javascript
-let objektMince;
-let minceX;
-let minceY;
-let minceSirka;
-let minceVyska;
+let objektMince
+let minceX
+let minceY
+let minceSirka
+let minceVyska
 
 // Najde minci na stránce a uloží ji do proměnné objektMince
-objektMince = document.querySelector("#mince");
+objektMince = document.querySelector("#mince")
 
 // Do proměnných minceSirka a minceVyska si nachystáme velikost mince
-minceSirka = 32;
-minceVyska = 32;
+minceSirka = 32
+minceVyska = 32
 ~~~
 
 
@@ -212,34 +212,34 @@ Budou se ti hodit tyto příkazy:
 
 ~~~javascript
 // Nastaví do proměnné minceX natvrdo 200
-minceX = 200;
+minceX = 200
 ~~~
 ~~~javascript
 // Nastaví do proměnné minceX náhodné číslo 0 .. šířka obrazovky
-minceX = Math.floor(Math.random() * (window.innerWidth - minceSirka));
+minceX = Math.floor(Math.random() * (window.innerWidth - minceSirka))
 ~~~
 ~~~javascript
 // Nastaví do proměnné minceY náhodné číslo 0 .. výška obrazovky
-minceY = Math.floor(Math.random() * (window.innerHeight - minceVyska));
+minceY = Math.floor(Math.random() * (window.innerHeight - minceVyska))
 ~~~
 ~~~javascript
 // Nastaví do proměnné minceY natvrdo 100
-minceY = 100;
+minceY = 100
 ~~~
 ~~~javascript
 // Přesune (zobrazí) minci na obrazovce ve vodorovném směru na souřadnici z proměnné minceX
-objektMince.style.left = minceX + "px";
+objektMince.style.left = minceX + "px"
 ~~~
 ~~~javascript
 // Přesune (zobrazí) minci na obrazovce ve svislém směru na souřadnici z proměnné minceY
-objektMince.style.top = minceY + "px";
+objektMince.style.top = minceY + "px"
 ~~~
 
 
 
 Level 4 - Sbírání mincí
-==============================
-                  
+=======================
+
 Umožni, aby panáček mohl sebrat mince a přičetlo se mu skóre.
 
 Pro sebrání mince je nutno **při každém pohybu panáčka** testovat střet *obrázku panáčka* a *obrázku mince*.
@@ -254,10 +254,8 @@ if (!(panacekX + panacekSirka < minceX ||
       minceY + minceVyska < panacekY)) {
 
     // Sem vlož příkazy, které se mají provést
-    // při střetu panáčka a mince
-    // Např.:
-    // 1) posuň minci na jiné náhodné místo
-    // 2) zvětši pocetSkore o 1
+    // při střetu panáčka a mince.
+    // Například posun mince na jiné náhodné místo
 
 }
 ~~~
@@ -265,7 +263,14 @@ if (!(panacekX + panacekSirka < minceX ||
 Sebrání mince lze simulovat tak, že se mince prostě přesune na jiné (náhodné) souřadnice.
 Příkazy k tomu už máš v minulém kroku. Jen je musíš okopírovat na správné místo v programu.
 
-Pokud chceš přidat do stránky skóre, doplň do HTML tyto značky:
+
+
+Level 5 - Skóre
+===============
+
+Přidej do stránky skóre.
+
+Doplň do HTML tyto značky:
 
 ~~~html
 <p class="vysledek">Skóre: <span id="skore">0</span></p>
@@ -276,22 +281,22 @@ kolik mincí panáček sebral.
 
 ~~~javascript
 // Najde na stránce prvek, kam se bude skóre dopisovat
-let objektSkore;
-objektSkore = document.querySelector("#skore");
+let objektSkore
+objektSkore = document.querySelector("#skore")
 ~~~
 
 Textový obsah HTML prvku se nastaví takto:
 
 ~~~javascript
-// Zobrazí v HTML prvku objektSkore obsah proměnné pocetSkore  
-objektSkore.textContent = pocetSkore;
+// Zobrazí v HTML prvku objektSkore obsah proměnné pocetSkore
+objektSkore.textContent = pocetSkore
 ~~~
 
 Proměnnou `pocetSkore` si definuj sama a zvyšuj její hodnotu při sebrání mince.
 
 
 
-Level 5 - Změna obrázků panáčka při pohybu
+Level 6 - Změna obrázků panáčka při pohybu
 ==========================================
 
 Když jde panáček doprava, nastav mu obrázek `obrazky/panacek-vpravo.png`,
@@ -301,14 +306,14 @@ nahoru a dolů.
 Panáčkovi nastavíš obrázek nasledujícím příkazem v JavaScriptu:
 
 ~~~javascript
-objektPanacek.src = "obrazky/panacek-vpravo.png";
+objektPanacek.src = "obrazky/panacek-vpravo.png"
 ~~~
 
 Musíš se samozřejmě správně rozhodnout, kam tento příkaz vložit.
 
 
 
-Level 6 - Přehrávej zvuky při sbírání mince
+Level 7 - Přehrávej zvuky při sbírání mince
 ===========================================
 
 Doplň do hry zvuky. Např. cinknutí mince, když ji panáček sebere.
@@ -325,12 +330,12 @@ K přehrání zvuku pak můžeš použít následující příkaz:
 
 ~~~javascript
 // Přehraje zvuk cinknutí
-objektZvuk.play();
+objektZvuk.play()
 ~~~
 
 
 
-Level 7 - Omezení pohybu panáčka vlevo a nahoru
+Level 8 - Omezení pohybu panáčka vlevo a nahoru
 ===============================================
 
 Panáček už krásně chodí, sbírá mince, ale má to jeden neduh.
@@ -344,7 +349,7 @@ Vlož tento kód, omezující pohyb vlevo, na správné místo v programu:
 ~~~javascript
 // Pokud se stane, že by X-ová souřadnice panáčka byla záporná, naprav to.
 if (panacekX < 0) {
-    panacekX = 0;
+    panacekX = 0
 }
 ~~~
 
@@ -352,7 +357,7 @@ Ověř, že panáček už nemůže zajít vlevo mimo obraz a podobně obraň i Y
 
 
 
-Level 8 - Omezení pohybu panáčka vpravo a dolů
+Level 9 - Omezení pohybu panáčka vpravo a dolů
 ==============================================
 
 Omezení pohybu vpravo a dolů je podobné jako v minulém levelu. Je nicméně komplikovanější o to,
@@ -361,11 +366,11 @@ Omezení pohybu vpravo a dolů je podobné jako v minulém levelu. Je nicméně 
 Trochu ti napovíme, když ti ukážeme, jak zjistíš šířku a výšku obrazovky (okna prohlížeče):
 
 ~~~javascript
-let sirkaOkna;
-let vyskaOkna;
+let sirkaOkna
+let vyskaOkna
 
-sirkaOkna = window.innerWidth;
-vyskaOkna = window.innerHeight;
+sirkaOkna = window.innerWidth
+vyskaOkna = window.innerHeight
 ~~~
 
 Pokud to naprogramuješ správně, s panáčkem by teď nemělo být možné vyjít ve vpravo a dolů mimo obraz.
@@ -377,8 +382,8 @@ Možná si ale všimneš, že při pohybu doprava nadoraz se dole objeví posuvn
 
 
 
-Level 9 - Vlastní vylepšení
-===========================
+Level 10 - Vlastní vylepšení
+============================
 
 Projekt obsahuje spoustu předpřipravených obrázků a zvuků.
 Zkus přidat třeba nepřátele (mouchy...), životy, sbírání i jiných věcí než mincí.

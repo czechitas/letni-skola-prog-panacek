@@ -41,6 +41,14 @@ minceY = Math.floor(Math.random() * (window.innerHeight - minceVyska))
 objektMince.style.left = minceX + "px"
 objektMince.style.top = minceY + "px"
 
+// Vytvoří počítadlo skóre a nastavíme ho na nulu
+let pocetSkore
+pocetSkore = 0
+
+// Najde na stránce prvek, kam se bude skóre dopisovat
+let objektSkore
+objektSkore = document.querySelector("#skore")
+
 
 function priStiskuKlavesy(klavesa) {
   if (klavesa.key === "ArrowRight") {
@@ -74,5 +82,11 @@ function priStiskuKlavesy(klavesa) {
     minceY = Math.floor(Math.random() * (window.innerHeight - minceVyska))
     objektMince.style.left = minceX + "px"
     objektMince.style.top = minceY + "px"
+
+    // Zvětší skore o 1
+    pocetSkore = pocetSkore + 1
+
+    // Zobrazí v HTML prvku objektSkore obsah proměnné pocetSkore
+    objektSkore.textContent = pocetSkore
   }
 }
