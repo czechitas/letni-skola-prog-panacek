@@ -60,13 +60,13 @@ Level 2 - Koncept visuální vs číselné proměnné
 ==============================================
 
 V minulém levelu sis mohla všimnout, že je nejprve potřeba nastavit hodnotu do proměnných `panacekX` a `panacekY`,
-a teprve potom použít proměnnou `visualniPanacek`. Až potom se obrázek opravdu posune na obrazovce.
+a teprve potom manipulovat s proměnnou `visualniPanacek`. Až potom se obrázek opravdu posune na obrazovce.
 
 V programu rozlišujeme různé typy proměnných: textové, číselné a visuální.
 
-**Textové proměnné** obsahují text. Například jméno hráče.
+**Textové proměnné** obsahují text. Například jméno hráče.<br/>
 **Číselné proměnné** (jako třeba `panacekX`, `panacekY`) obsahují prosté číslo,
-které se nikde nezobrazuje, ale je nutné pro výpočty běhěm hry (pro *herní logiku*).
+které se nikde nezobrazuje, ale je nutné pro výpočty běhěm hry (pro *herní logiku*).<br/>
 **Visuální proměnné** (jako třeba `visualniPanacek` nebo v budoucnu `visualniMince`)
 obsahují celý prvek `<img>` z HTML a manipulace s touto proměnnou má visuální dopad.
 
