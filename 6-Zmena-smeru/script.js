@@ -42,8 +42,8 @@ visualniMince.style.left = minceX + "px"
 visualniMince.style.top = minceY + "px"
 
 // Vytvoří počítadlo skóre a nastavíme ho na nulu
-let pocetSkore
-pocetSkore = 0
+let hodnotaSkore
+hodnotaSkore = 0
 
 // Najde na stránce prvek, kam se bude skóre dopisovat
 let visualniSkore
@@ -88,9 +88,9 @@ function priStiskuKlavesy(klavesa) {
     visualniMince.style.top = minceY + "px"
 
     // Zvětší skore o 1
-    pocetSkore = pocetSkore + 1
+    hodnotaSkore = hodnotaSkore + 1
 
-    // Zobrazí v HTML prvku visualniSkore obsah proměnné pocetSkore
-    visualniSkore.textContent = pocetSkore
+    // Zobrazí v HTML prvku visualniSkore obsah proměnné hodnotaSkore
+    visualniSkore.textContent = hodnotaSkore
   }
 }
