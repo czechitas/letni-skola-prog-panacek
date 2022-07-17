@@ -14,17 +14,17 @@ Není uživatelsky moc příjemné, když panáček začíná vlevo nahoře.
 Umísti panáčka více do středu obrazovky, třeba na pevnou pozici
 [400, 300] pixelů na obrazovce.
 
-Tyto příkazy jsou povinné. Jsou to deklarace proměnných, které budou obsahovat souřadnice panáčka. Prostě vše 1:1 překopíruj do `script.js`.
+Následující příkazy jsou povinné. Je to deklarace proměnných, které budou obsahovat souřadnice panáčka. Prostě vše 1:1 překopíruj do `script.js`.
 Všimni si, že příkazy zatím nenastavují panáčka na žádnou pozici. Bude tedy na [0, 0].
 ~~~javascript
-let objektPanacek
+let visualniPanacek
 let panacekX
 let panacekY
 let panacekSirka
 let panacekVyska
 
-// Najde panáčka na stránce a uloží ho do proměnné objektPanacek
-objektPanacek = document.querySelector("#panacek")
+// Najde panáčka na stránce a uloží ho do proměnné visualniPanacek
+visualniPanacek = document.querySelector("#panacek")
 
 // Do proměnných panacekSirka a panacekVyska si nachystáme velikost panáčka.
 // Zatím to nevyužijeme, ale bude se to hodit později
@@ -33,10 +33,10 @@ panacekVyska = 70
 ~~~
 
 Teď pomocí následujících příkazů umísti panáčka na pozici [400, 300].
-Schválně **nejsou ve správném pořadí**, musíš trochu přemýšlet:
+Pozor! Schválně **nejsou ve správném pořadí**, musíš trochu přemýšlet:
 ~~~javascript
 // Přesune (zobrazí) panáčka na obrazovce ve vodorovném směru na souřadnici z proměnné panacekX
-objektPanacek.style.left = panacekX + "px"
+visualniPanacek.style.left = panacekX + "px"
 ~~~
 
 ~~~javascript
@@ -46,7 +46,7 @@ panacekX = 400
 
 ~~~javascript
 // Přesune (zobrazí) panáčka na obrazovce ve svislém směru na souřadnici z proměnné panacekY
-objektPanacek.style.top = panacekY + "px"
+visualniPanacek.style.top = panacekY + "px"
 ~~~
 
 ~~~javascript
@@ -101,12 +101,12 @@ Použij příkazy ze seznamu (2) a zbav se `console.log(..)`. Příkazy opět **
 Seznam (2):
 ~~~javascript
 // Přesune (zobrazí) panáčka na obrazovce ve vodorovném směru na souřadnici z proměnné panacekX
-objektPanacek.style.left = panacekX + "px"
+visualniPanacek.style.left = panacekX + "px"
 ~~~
 
 ~~~javascript
 // Přesune (zobrazí) panáčka na obrazovce ve svislém směru na souřadnici z proměnné panacekY
-objektPanacek.style.top = panacekY + "px"
+visualniPanacek.style.top = panacekY + "px"
 ~~~
 
 ~~~javascript
@@ -192,14 +192,14 @@ Panáček má za úkol sbírat mince. Přidej tedy minci do HTML do `<body>`.
 Aby s ní šlo pracovat v programu, ulož ji v JavaScriptu do proměnné:
 
 ~~~javascript
-let objektMince
+let visualniMince
 let minceX
 let minceY
 let minceSirka
 let minceVyska
 
-// Najde minci na stránce a uloží ji do proměnné objektMince
-objektMince = document.querySelector("#mince")
+// Najde minci na stránce a uloží ji do proměnné visualniMince
+visualniMince = document.querySelector("#mince")
 
 // Do proměnných minceSirka a minceVyska si nachystáme velikost mince
 minceSirka = 32
@@ -228,11 +228,11 @@ minceY = 100
 ~~~
 ~~~javascript
 // Přesune (zobrazí) minci na obrazovce ve vodorovném směru na souřadnici z proměnné minceX
-objektMince.style.left = minceX + "px"
+visualniMince.style.left = minceX + "px"
 ~~~
 ~~~javascript
 // Přesune (zobrazí) minci na obrazovce ve svislém směru na souřadnici z proměnné minceY
-objektMince.style.top = minceY + "px"
+visualniMince.style.top = minceY + "px"
 ~~~
 
 
@@ -281,18 +281,18 @@ kolik mincí panáček sebral.
 
 ~~~javascript
 // Najde na stránce prvek, kam se bude skóre dopisovat
-let objektSkore
-objektSkore = document.querySelector("#skore")
+let visualniSkore
+visualniSkore = document.querySelector("#skore")
 ~~~
 
 Textový obsah HTML prvku se nastaví takto:
 
 ~~~javascript
-// Zobrazí v HTML prvku objektSkore obsah proměnné pocetSkore
-objektSkore.textContent = pocetSkore
+// Zobrazí v HTML prvku visualniSkore obsah proměnné hodnotaSkore
+visualniSkore.textContent = hodnotaSkore
 ~~~
 
-Proměnnou `pocetSkore` si definuj sama a zvyšuj její hodnotu při sebrání mince.
+Proměnnou `hodnotaSkore` si definuj sama a zvyšuj její hodnotu při sebrání mince.
 
 
 
@@ -306,7 +306,7 @@ nahoru a dolů.
 Panáčkovi nastavíš obrázek nasledujícím příkazem v JavaScriptu:
 
 ~~~javascript
-objektPanacek.src = "obrazky/panacek-vpravo.png"
+visualniPanacek.src = "obrazky/panacek-vpravo.png"
 ~~~
 
 Musíš se samozřejmě správně rozhodnout, kam tento příkaz vložit.
@@ -325,12 +325,12 @@ Nejprve musíš přidat do HTML značku pro vybraný zvuk:
 ~~~
 
 Zvuk pak v JavaScriptu vyhledáš na stránce pomocí `document.querySelector(..)`
-a uložíš si ho např. do proměnné `objektZvuk`, stejně jako jsi to dělala s panáčkem, mincí nebo skóre.
+a uložíš si ho např. do proměnné `audioMince`, stejně jako jsi to dělala s panáčkem, mincí nebo skóre.
 K přehrání zvuku pak můžeš použít následující příkaz:
 
 ~~~javascript
 // Přehraje zvuk cinknutí
-objektZvuk.play()
+audioMince.play()
 ~~~
 
 
@@ -375,8 +375,8 @@ vyskaOkna = window.innerHeight
 
 Pokud to naprogramuješ správně, s panáčkem by teď nemělo být možné vyjít ve vpravo a dolů mimo obraz.
 
-Možná si ale všimneš, že při pohybu doprava nadoraz se dole objeví posuvník a obraz se mírně posune (zhruba o 2 cm).
-Čím to je? Který objekt na obrazovce je široký zhruba právě 2 cm? Co se kde musí odečíst, aby to fungovalo bezchybně?
+Možná si ale všimneš, že při pohybu doprava nadoraz se dole objeví posuvník a obraz se mírně posune (o 64 pixelů).
+Čím to je? Který objekt na obrazovce je široký právě 64 pixelů? Co se kde musí odečíst, aby to fungovalo bezchybně?
 
 ![Ukázka chyby omezení pohybu](chyba-pohybu-vpravo.png)
 
