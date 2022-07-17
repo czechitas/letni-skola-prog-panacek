@@ -56,6 +56,57 @@ panacekY = 300
 
 
 
+Level 2 - Koncept visuální vs číselné proměnné
+==============================================
+
+V minulém levelu sis mohla všimnout, že je nejprve potřeba nastavit hodnotu do proměnných `panacekX` a `panacekY`,
+a teprve potom použít proměnnou `visualniPanacek`. Až potom se obrázek opravdu posune na obrazovce.
+
+V programu rozlišujeme různé typy proměnných: textové, číselné a visuální.
+
+**Textové proměnné** obsahují text. Například jméno hráče.
+**Číselné proměnné** (jako třeba `panacekX`, `panacekY`) obsahují prosté číslo,
+které se nikde nezobrazuje, ale je nutné pro výpočty běhěm hry (pro *herní logiku*).
+**Visuální proměnné** (jako třeba `visualniPanacek` nebo v budoucnu `visualniMince`)
+obsahují celý prvek `<img>` z HTML a manipulace s touto proměnnou má visuální dopad.
+
+Při programování postavičky ve hře se postupuje tak, že v číselných proměnných
+uchováváme souřadnice postavičky a budeme je přičítat a odečítat, když budeme chtít pohybovat
+s postavičkou. Ale prostá změna čísla nezpůsobí překreslení postavičky na obrazovce.
+To se stane až tehdy, kdy aktualizujeme visuální proměnnou dle hodnoty z číselné proměnné.
+
+Zkus si ještě jednou, že to tak funguje. Vlož na konec programu příkazy:
+
+~~~javascript
+// Nastaví souřadnice do proměnných panacekX a panacekY
+panacekX = 20
+panacekY = 10
+~~~
+
+Posunul se panáček do levého horního rohu?
+
+A teď přidej na konec programu ještě:
+
+~~~javascript
+// Přesune (zobrazí) panáčka na obrazovce na aktualizované souřadnice
+visualniPanacek.style.left = panacekX + "px"
+visualniPanacek.style.top = panacekY + "px"
+~~~
+
+A co teď? Posunul se panáček do levého horního rohu?
+
+A teď zase posuň panáčka víc do středu:
+
+~~~javascript
+// Zvýší souřadnice v proměnných panacekX a panacekY
+panacekX = panacekX + 200
+panacekY = panacekY + 150
+~~~
+
+Posunul se na obrazovce zase dál od kraje? Nebo je potřeba ještě přidat aktualizaci `visualniPanacek`?
+
+
+
 Level 3 - Pohyb panáčka
 =======================
 

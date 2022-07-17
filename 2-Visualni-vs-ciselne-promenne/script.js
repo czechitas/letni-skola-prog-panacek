@@ -34,25 +34,3 @@ panacekY = panacekY + 150
 // Přesune (zobrazí) panáčka na obrazovce na aktualizované souřadnice
 visualniPanacek.style.left = panacekX + "px"
 visualniPanacek.style.top = panacekY + "px"
-
-
-function priStiskuKlavesy(klavesa) {
-  if (klavesa.key === "ArrowRight") {
-    panacekX = panacekX + 10
-  }
-
-  if (klavesa.key === "ArrowLeft") {
-    panacekX = panacekX - 10
-  }
-
-  if (klavesa.key === "ArrowUp") {
-    panacekY = panacekY - 10
-  }
-
-  if (klavesa.key === "ArrowDown") {
-    panacekY = panacekY + 10
-  }
-
-  visualniPanacek.style.left = panacekX + "px"
-  visualniPanacek.style.top = panacekY + "px"
-}

@@ -21,6 +21,21 @@ visualniPanacek.style.left = panacekX + "px"
 visualniPanacek.style.top = panacekY + "px"
 
 
+// Nastaví souřadnice do proměnných panacekX a panacekY
+panacekX = 20
+panacekY = 10
+// Přesune (zobrazí) panáčka na obrazovce na aktualizované souřadnice
+visualniPanacek.style.left = panacekX + "px"
+visualniPanacek.style.top = panacekY + "px"
+
+// Zvýší souřadnice v proměnných panacekX a panacekY
+panacekX = panacekX + 200
+panacekY = panacekY + 150
+// Přesune (zobrazí) panáčka na obrazovce na aktualizované souřadnice
+visualniPanacek.style.left = panacekX + "px"
+visualniPanacek.style.top = panacekY + "px"
+
+
 let visualniMince
 let minceX
 let minceY
@@ -40,14 +55,6 @@ minceX = Math.floor(Math.random() * (window.innerWidth - minceSirka))
 minceY = Math.floor(Math.random() * (window.innerHeight - minceVyska))
 visualniMince.style.left = minceX + "px"
 visualniMince.style.top = minceY + "px"
-
-// Vytvoří počítadlo skóre a nastavíme ho na nulu
-let hodnotaSkore
-hodnotaSkore = 0
-
-// Najde na stránce prvek, kam se bude skóre dopisovat
-let visualniSkore
-visualniSkore = document.querySelector("#skore")
 
 
 function priStiskuKlavesy(klavesa) {
@@ -82,11 +89,5 @@ function priStiskuKlavesy(klavesa) {
     minceY = Math.floor(Math.random() * (window.innerHeight - minceVyska))
     visualniMince.style.left = minceX + "px"
     visualniMince.style.top = minceY + "px"
-
-    // Zvětší skore o 1
-    hodnotaSkore = hodnotaSkore + 1
-
-    // Zobrazí v HTML prvku visualniSkore obsah proměnné hodnotaSkore
-    visualniSkore.textContent = hodnotaSkore
   }
 }

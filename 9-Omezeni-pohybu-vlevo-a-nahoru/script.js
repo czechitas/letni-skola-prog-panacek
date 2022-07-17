@@ -21,6 +21,21 @@ visualniPanacek.style.left = panacekX + "px"
 visualniPanacek.style.top = panacekY + "px"
 
 
+// Nastaví souřadnice do proměnných panacekX a panacekY
+panacekX = 20
+panacekY = 10
+// Přesune (zobrazí) panáčka na obrazovce na aktualizované souřadnice
+visualniPanacek.style.left = panacekX + "px"
+visualniPanacek.style.top = panacekY + "px"
+
+// Zvýší souřadnice v proměnných panacekX a panacekY
+panacekX = panacekX + 200
+panacekY = panacekY + 150
+// Přesune (zobrazí) panáčka na obrazovce na aktualizované souřadnice
+visualniPanacek.style.left = panacekX + "px"
+visualniPanacek.style.top = panacekY + "px"
+
+
 let visualniMince
 let minceX
 let minceY
@@ -53,14 +68,6 @@ visualniSkore = document.querySelector("#skore")
 // Najde na stránce zvuk cinknutí mince
 let audioMince
 audioMince = document.querySelector("#zvukmince")
-
-
-let sirkaOkna
-let vyskaOkna
-
-sirkaOkna = window.innerWidth
-vyskaOkna = window.innerHeight
-
 
 
 function priStiskuKlavesy(klavesa) {
