@@ -56,7 +56,58 @@ panacekY = 300
 
 
 
-Level 2 - Pohyb panáčka
+Level 2 - Koncept visuální vs číselné proměnné
+==============================================
+
+V minulém levelu sis mohla všimnout, že je nejprve potřeba nastavit hodnotu do proměnných `panacekX` a `panacekY`,
+a teprve potom použít proměnnou `visualniPanacek`. Až potom se obrázek opravdu posune na obrazovce.
+
+V programu rozlišujeme různé typy proměnných: textové, číselné a visuální.
+
+**Textové proměnné** obsahují text. Například jméno hráče.
+**Číselné proměnné** (jako třeba `panacekX`, `panacekY`) obsahují prosté číslo,
+které se nikde nezobrazuje, ale je nutné pro výpočty běhěm hry (pro *herní logiku*).
+**Visuální proměnné** (jako třeba `visualniPanacek` nebo v budoucnu `visualniMince`)
+obsahují celý prvek `<img>` z HTML a manipulace s touto proměnnou má visuální dopad.
+
+Při programování postavičky ve hře se postupuje tak, že v číselných proměnných
+uchováváme souřadnice postavičky a budeme je přičítat a odečítat, když budeme chtít pohybovat
+s postavičkou. Ale prostá změna čísla nezpůsobí překreslení postavičky na obrazovce.
+To se stane až tehdy, kdy aktualizujeme visuální proměnnou dle hodnoty z číselné proměnné.
+
+Zkus si ještě jednou, že to tak funguje. Vlož na konec programu příkazy:
+
+~~~javascript
+// Nastaví souřadnice do proměnných panacekX a panacekY
+panacekX = 20
+panacekY = 10
+~~~
+
+Posunul se panáček do levého horního rohu?
+
+A teď přidej na konec programu ještě:
+
+~~~javascript
+// Přesune (zobrazí) panáčka na obrazovce na aktualizované souřadnice
+visualniPanacek.style.left = panacekX + "px"
+visualniPanacek.style.top = panacekY + "px"
+~~~
+
+A co teď? Posunul se panáček do levého horního rohu?
+
+A teď zase posuň panáčka víc do středu:
+
+~~~javascript
+// Zvýší souřadnice v proměnných panacekX a panacekY
+panacekX = panacekX + 200
+panacekY = panacekY + 150
+~~~
+
+Posunul se na obrazovce zase dál od kraje? Nebo je potřeba ještě přidat aktualizaci `visualniPanacek`?
+
+
+
+Level 3 - Pohyb panáčka
 =======================
 
 Naprogramuj pohyb panáčka po obrazovce při stisku klávesy.
@@ -179,7 +230,7 @@ if (event.key === "ArrowDown") {
 
 
 
-Level 3 - Přidej minci
+Level 4 - Přidej minci
 ======================
 
 Panáček má za úkol sbírat mince. Přidej tedy minci do HTML do `<body>`.
@@ -237,7 +288,7 @@ visualniMince.style.top = minceY + "px"
 
 
 
-Level 4 - Sbírání mincí
+Level 5 - Sbírání mincí
 =======================
 
 Umožni, aby panáček mohl sebrat mince a přičetlo se mu skóre.
@@ -265,7 +316,7 @@ Příkazy k tomu už máš v minulém kroku. Jen je musíš okopírovat na sprá
 
 
 
-Level 5 - Skóre
+Level 6 - Skóre
 ===============
 
 Přidej do stránky skóre.
@@ -296,7 +347,7 @@ Proměnnou `hodnotaSkore` si definuj sama a zvyšuj její hodnotu při sebrání
 
 
 
-Level 6 - Změna obrázků panáčka při pohybu
+Level 7 - Změna obrázků panáčka při pohybu
 ==========================================
 
 Když jde panáček doprava, nastav mu obrázek `obrazky/panacek-vpravo.png`,
@@ -313,7 +364,7 @@ Musíš se samozřejmě správně rozhodnout, kam tento příkaz vložit.
 
 
 
-Level 7 - Přehrávej zvuky při sbírání mince
+Level 8 - Přehrávej zvuky při sbírání mince
 ===========================================
 
 Doplň do hry zvuky. Např. cinknutí mince, když ji panáček sebere.
@@ -335,7 +386,7 @@ audioMince.play()
 
 
 
-Level 8 - Omezení pohybu panáčka vlevo a nahoru
+Level 9 - Omezení pohybu panáčka vlevo a nahoru
 ===============================================
 
 Panáček už krásně chodí, sbírá mince, ale má to jeden neduh.
@@ -357,8 +408,8 @@ Ověř, že panáček už nemůže zajít vlevo mimo obraz a podobně obraň i Y
 
 
 
-Level 9 - Omezení pohybu panáčka vpravo a dolů
-==============================================
+Level 10 - Omezení pohybu panáčka vpravo a dolů
+===============================================
 
 Omezení pohybu vpravo a dolů je podobné jako v minulém levelu. Je nicméně komplikovanější o to,
 že podmínka není `< 0`, ale naopak větší než jiná hodnota. Která?
@@ -382,7 +433,7 @@ Možná si ale všimneš, že při pohybu doprava nadoraz se dole objeví posuvn
 
 
 
-Level 10 - Vlastní vylepšení
+Level 11 - Vlastní vylepšení
 ============================
 
 Projekt obsahuje spoustu předpřipravených obrázků a zvuků.
